@@ -20,9 +20,7 @@ CREATE TABLE `roommate_room_agreements` (
   INDEX `idx_roommate_pair` (`roommate_pair_id`),
   INDEX `idx_room_no` (`agreed_room_no`),
   INDEX `idx_agreement_status` (`agreement_status`),
-  INDEX `idx_students` (`student1_reg_no`, `student2_reg_no`),
-  FOREIGN KEY (`roommate_pair_id`) REFERENCES `roommate_matches`(`id`) ON DELETE CASCADE,
-  FOREIGN KEY (`agreed_room_no`) REFERENCES `roomsdetails`(`room_no`) ON DELETE CASCADE
+  INDEX `idx_students` (`student1_reg_no`, `student2_reg_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- View for agreed room bookings ready for processing

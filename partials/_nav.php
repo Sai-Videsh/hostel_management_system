@@ -16,6 +16,7 @@
                 </a>
 
                 <div class="nav__list">
+                    <?php if(!isset($studentView) || !$studentView): // Admin view menu items ?>
                     <a href="index.php" class="nav__link nav-home">
                       <i class='bx bx-grid-alt nav__icon' ></i>
                       <span class="nav__name">Home</span>
@@ -44,7 +45,10 @@
                       <i class="fa fa-exclamation-circle"></i>
                       <span class="nav__name">Manage Complaints</span>
                     </a>
-                    <a href="index.php?page=roommate" class="nav__link nav-roommate">
+                    <?php endif; ?>
+                    
+                    <!-- Always show roommate matching - for both admin and student views -->
+                    <a href="index.php?page=roommate<?php echo isset($studentView) && $studentView ? '&tab=preferences&reg_no='.$studentRegNo.'&student_view=1' : ''; ?>" class="nav__link nav-roommate">
                       <i class="fa fa-user-friends"></i>
                       <span class="nav__name">Roommate Matching</span>
                     </a>
@@ -56,11 +60,13 @@
                         <img src="img/profilePic.jpg" alt="Profile"/>
                     </div>
                     <div>
-                        <span class="nav__name">Admin</span>
-                        <div style="font-size:.75rem; color: var(--first-color-light);">Dashboard</div>
+                        <span class="nav__name"><?php echo isset($studentView) && $studentView ? 'Student' : 'Admin'; ?></span>
+                        <div style="font-size:.75rem; color: var(--first-color-light);">
+                            <?php echo isset($studentView) && $studentView ? 'My Preferences' : 'Dashboard'; ?>
+                        </div>
                     </div>
                 </div>
-                <a href="partials/_logout.php" class="nav__link">
+                <a href="<?php echo isset($studentView) && $studentView ? 'student-logout.php' : 'partials/_logout.php'; ?>" class="nav__link">
                   <i class='bx bx-log-out nav__icon' ></i>
                   <span class="nav__name">Log Out</span>
                 </a>

@@ -1,15 +1,25 @@
 <?php 
     session_start();
+    // Check for admin login
     if(isset($_SESSION['adminloggedin']) && $_SESSION['adminloggedin']==true){
-        $adminloggedin= true;
+        $adminloggedin = true;
         $userId = $_SESSION['adminuserId'];
+        $studentView = false;
+    }
+    // Check for student login with student_view parameter
+    elseif(isset($_SESSION['student_reg_no']) && isset($_GET['student_view']) && $_GET['student_view']==1){
+        $adminloggedin = false; // Not an admin
+        $studentView = true;    // But is a student view
+        $studentRegNo = $_SESSION['student_reg_no'];
     }
     else{
         $adminloggedin = false;
+        $studentView = false;
         $userId = 0;
     }
 
-if($adminloggedin) {
+// Allow access for both admin users and students in student view mode
+if($adminloggedin || $studentView) {
 ?>
 <!doctype html>
 <html lang="en">
@@ -96,6 +106,13 @@ if($adminloggedin) {
     }
 else
 {
- header("location: /hostel-management-system/login.php");
+    // Redirect based on the most likely intended destination
+    if(isset($_SESSION['student_reg_no'])) {
+        // If it's a student without the proper view parameter
+        header("location: /hostel-management-system/student-preferences.php");
+    } else {
+        // Otherwise redirect to admin login
+        header("location: /hostel-management-system/login.php");
+    }
 }
 ?>

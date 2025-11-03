@@ -2,12 +2,24 @@
 // Get existing preferences if any
 $existing_preferences = null;
 $selected_reg_no = '';
+$student_view = isset($_GET['student_view']) && $_GET['student_view'] == '1';
 
 // Check both GET and POST for reg_no
 if(isset($_GET['reg_no']) && !empty($_GET['reg_no'])) {
     $selected_reg_no = mysqli_real_escape_string($conn, $_GET['reg_no']);
 } elseif(isset($_POST['reg_no']) && !empty($_POST['reg_no'])) {
     $selected_reg_no = mysqli_real_escape_string($conn, $_POST['reg_no']);
+}
+
+// For student view, verify they can only access their own preferences
+if($student_view) {
+    include 'student-session.php';
+    check_student_login();
+    
+    // Make sure they can only access their own preferences
+    if($selected_reg_no != $_SESSION['student_reg_no']) {
+        $selected_reg_no = $_SESSION['student_reg_no'];
+    }
 }
 
 if($selected_reg_no) {
@@ -23,13 +35,23 @@ if($selected_reg_no) {
     <div class="col-md-12">
         <div class="card preference-card">
             <div class="card-header" style="background-color: rgb(111 202 203); color: white;">
-                <h5><i class="fa fa-user-cog"></i> Roommate Preferences</h5>
-                <small>Fill out your preferences to find compatible roommates</small>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5><i class="fa fa-user-cog"></i> Roommate Preferences</h5>
+                        <small>Fill out your preferences to find compatible roommates</small>
+                    </div>
+                    <?php if($student_view): ?>
+                    <div>
+                        <a href="student-logout.php" class="btn btn-light btn-sm"><i class="fa fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                    <?php endif; ?>
+                </div>
             </div>
             <div class="card-body">
                 <form method="POST" id="preferencesForm">
                     <div class="row">
-                        <!-- Student Selection -->
+                        <!-- Student Selection (hidden for student view) -->
+                        <?php if(!$student_view): ?>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label><i class="fa fa-user"></i> Select Student</label>
@@ -48,6 +70,25 @@ if($selected_reg_no) {
                                 </select>
                             </div>
                         </div>
+                        <?php else: ?>
+                        <!-- Hidden input for student view -->
+                        <input type="hidden" name="reg_no" value="<?php echo $selected_reg_no; ?>">
+                        <div class="col-md-6">
+                            <div class="alert alert-info">
+                                <i class="fa fa-user"></i> <strong>Student:</strong> 
+                                <?php
+                                    $student_info_sql = "SELECT CONCAT(first_name, ' ', last_name) as student_name FROM userregistration WHERE registration_no = '$selected_reg_no'";
+                                    $student_info_result = mysqli_query($conn, $student_info_sql);
+                                    if($student_info_result && mysqli_num_rows($student_info_result) > 0) {
+                                        $student_info = mysqli_fetch_assoc($student_info_result);
+                                        echo $selected_reg_no . ' - ' . $student_info['student_name'];
+                                    } else {
+                                        echo $selected_reg_no;
+                                    }
+                                ?>
+                            </div>
+                        </div>
+                        <?php endif; ?>
 
                         <!-- Branch -->
                         <div class="col-md-6">

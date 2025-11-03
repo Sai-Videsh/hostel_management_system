@@ -1,0 +1,23 @@
+HOSTEL MANAGEMENT SYSTEM DATABASE SETUP INSTRUCTIONS
+
+1. Create a new file called "hostel_db_complete.sql" in your project
+2. Copy the complete SQL code from our conversation into that file
+3. Import that SQL file into phpMyAdmin as described below
+
+=== IMPORT INSTRUCTIONS ===
+
+1. Open phpMyAdmin (http://localhost/phpmyadmin/)
+2. Create a new database called "hostel_db" (or drop the existing one first)
+3. Select the database and click the "Import" tab
+4. Click "Choose File" and select your hostel_db_complete.sql file
+5. Make sure "Enable foreign key checks" is UNCHECKED
+6. Click "Go" to start the import
+
+The consolidated SQL file contains:
+- All core tables (users, courses, rooms, etc.)
+- All roommate system tables
+- Properly structured views
+- Triggers and stored procedures
+- Default admin user (username: admin, password: admin)
+
+This single file approach avoids the issues you were experiencing with importing multiple SQL files in sequence.

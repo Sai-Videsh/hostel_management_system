@@ -72,16 +72,29 @@
 	</div>
 </div>
 <?php
-$fetch_query = mysqli_query($conn, "select max(id) as id from userregistration");
-      $row = mysqli_fetch_assoc($fetch_query);
-      if($row['id']==0)
-      {
-        $user_id = 1;
-      }
-      else
-      {
-        $user_id = $row['id'] + 1;
-      }
+// Check the highest existing registration number
+$check_query = mysqli_query($conn, "SELECT registration_no FROM userregistration ORDER BY id DESC LIMIT 1");
+$row = mysqli_fetch_assoc($check_query);
+
+if (!$row) {
+    // No users exist, start with REG-001
+    $reg_number = "REG-001";
+} else {
+    // Extract the numeric part from the last registration number
+    $last_reg = $row['registration_no'];
+    $matches = array();
+    if (preg_match('/REG-(\d+)/', $last_reg, $matches)) {
+        $last_number = intval($matches[1]);
+        $next_number = $last_number + 1;
+        $reg_number = "REG-" . str_pad($next_number, 3, '0', STR_PAD_LEFT);
+    } else {
+        // Fallback if pattern doesn't match
+        $count_query = mysqli_query($conn, "SELECT COUNT(*) as count FROM userregistration");
+        $count_row = mysqli_fetch_assoc($count_query);
+        $next_number = $count_row['count'] + 1;
+        $reg_number = "REG-" . str_pad($next_number, 3, '0', STR_PAD_LEFT);
+    }
+}
 ?>
 <!-- newUser Modal -->
 <div class="modal fade" id="newUser" tabindex="-1" role="dialog" aria-labelledby="newUser" aria-hidden="true">
@@ -97,7 +110,7 @@ $fetch_query = mysqli_query($conn, "select max(id) as id from userregistration")
         <form action="partials/_userManage.php" method="post">
               <div class="form-group">
                   <b><label for="registration">Registration No:</label></b>
-                  <input class="form-control" id="registration" name="registration" placeholder="Choose a unique Username" type="text" required value="REG-00<?php echo $user_id; ?>" readonly>
+                  <input class="form-control" id="registration" name="registration" placeholder="Registration Number" type="text" required value="<?php echo $reg_number; ?>" readonly>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">

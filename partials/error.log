@@ -1,0 +1,426 @@
+[02-Nov-2025 21:09:26 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => videsh
+    [lastName] => reddy
+    [email] => gadambharat3833@gmail.com
+    [phone] => 9063563833
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:09:26 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'videsh', 'reddy', 'gadambharat3833@gmail.com', '9063563833', 'Male')
+[02-Nov-2025 21:09:26 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:09:31 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => videsh
+    [lastName] => reddy
+    [email] => gadambharat3833@gmail.com
+    [phone] => 9063563833
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:09:31 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'videsh', 'reddy', 'gadambharat3833@gmail.com', '9063563833', 'Male')
+[02-Nov-2025 21:09:31 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:09:48 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => videsh
+    [lastName] => reddy
+    [email] => gadambharat3833@gmail.com
+    [phone] => 9063563833
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:09:48 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'videsh', 'reddy', 'gadambharat3833@gmail.com', '9063563833', 'Male')
+[02-Nov-2025 21:09:48 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:09:51 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => videsh
+    [lastName] => reddy
+    [email] => gadambharat3833@gmail.com
+    [phone] => 9063563833
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:09:51 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'videsh', 'reddy', 'gadambharat3833@gmail.com', '9063563833', 'Male')
+[02-Nov-2025 21:09:51 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:10:04 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-001
+    [firstName] => bharat
+    [lastName] => gadam
+    [email] => gadambharat3833@gmail.com
+    [phone] => 9063563833
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:10:04 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-001', 'bharat', 'gadam', 'gadambharat3833@gmail.com', '9063563833', 'Male')
+[02-Nov-2025 21:13:17 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => vikah
+    [lastName] => reddy
+    [email] => vidu@gmail.com
+    [phone] => 7574848480
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:13:17 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'vikah', 'reddy', 'vidu@gmail.com', '7574848480', 'Male')
+[02-Nov-2025 21:13:17 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:15:16 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => vikah
+    [lastName] => reddy
+    [email] => vidu@gmail.com
+    [phone] => 7574848480
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:15:16 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'vikah', 'reddy', 'vidu@gmail.com', '7574848480', 'Male')
+[02-Nov-2025 21:15:16 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:15:19 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => vikah
+    [lastName] => reddy
+    [email] => vidu@gmail.com
+    [phone] => 7574848480
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:15:19 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'vikah', 'reddy', 'vidu@gmail.com', '7574848480', 'Male')
+[02-Nov-2025 21:15:19 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:15:22 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => vikah
+    [lastName] => reddy
+    [email] => vidu@gmail.com
+    [phone] => 7574848480
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:15:22 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'vikah', 'reddy', 'vidu@gmail.com', '7574848480', 'Male')
+[02-Nov-2025 21:15:22 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:15:29 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => vikah
+    [lastName] => reddy
+    [email] => vidu@gmail.com
+    [phone] => 7574848480
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:15:29 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'vikah', 'reddy', 'vidu@gmail.com', '7574848480', 'Male')
+[02-Nov-2025 21:15:29 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:19:15 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => vikah
+    [lastName] => reddy
+    [email] => vidu@gmail.com
+    [phone] => 7574848480
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:19:15 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'vikah', 'reddy', 'vidu@gmail.com', '7574848480', 'Male')
+[02-Nov-2025 21:19:15 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:19:21 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => vikah
+    [lastName] => reddy
+    [email] => vidu@gmail.com
+    [phone] => 7574848480
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:19:21 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'vikah', 'reddy', 'vidu@gmail.com', '7574848480', 'Male')
+[02-Nov-2025 21:19:21 Europe/Berlin] SQL error: Duplicate entry '0' for key 'PRIMARY'
+[02-Nov-2025 21:32:12 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-001
+    [firstName] => bharat
+    [lastName] => gadam
+    [email] => gadambharat3833@gmail.com
+    [phone] => 9063563833
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:32:12 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-001', 'bharat', 'gadam', 'gadambharat3833@gmail.com', '9063563833', 'Male')
+[02-Nov-2025 21:32:27 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-002
+    [firstName] => videsh
+    [lastName] => reddy
+    [email] => vsrk@iiitk.ac.in
+    [phone] => 9063563833
+    [gender] => Male
+    [createUser] => 
+)
+
+[02-Nov-2025 21:32:27 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-002', 'videsh', 'reddy', 'vsrk@iiitk.ac.in', '9063563833', 'Male')
+[03-Nov-2025 06:34:12 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-003
+    [firstName] => billa
+    [lastName] => ru
+    [email] => hu@gmail.com
+    [phone] => 9063563833
+    [gender] => Male
+    [createUser] => 
+)
+
+[03-Nov-2025 06:34:12 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-003', 'billa', 'ru', 'hu@gmail.com', '9063563833', 'Male')
+[03-Nov-2025 07:09:05 Europe/Berlin] Attempting to remove photo: C:/xampp/htdocs/hostel-management-system/img/person-2.jpg
+[03-Nov-2025 07:09:05 Europe/Berlin] File exists, attempting to delete
+[03-Nov-2025 07:09:05 Europe/Berlin] File deleted successfully
+[03-Nov-2025 07:09:12 Europe/Berlin] Attempting to remove photo: C:/xampp/htdocs/hostel-management-system/img/person-1.jpg
+[03-Nov-2025 07:09:12 Europe/Berlin] File does not exist: C:/xampp/htdocs/hostel-management-system/img/person-1.jpg
+[03-Nov-2025 07:10:11 Europe/Berlin] Photo upload started for user ID: 1
+[03-Nov-2025 07:10:11 Europe/Berlin] Image check result: Array
+(
+    [0] => 288
+    [1] => 288
+    [2] => 18
+    [3] => width="288" height="288"
+    [bits] => 8
+    [mime] => image/webp
+)
+
+[03-Nov-2025 07:10:11 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-1.jpg
+[03-Nov-2025 07:10:11 Europe/Berlin] File uploaded successfully
+[03-Nov-2025 07:10:28 Europe/Berlin] Attempting to remove photo: C:/xampp/htdocs/hostel-management-system/img/person-3.jpg
+[03-Nov-2025 07:10:28 Europe/Berlin] File does not exist: C:/xampp/htdocs/hostel-management-system/img/person-3.jpg
+[03-Nov-2025 07:20:45 Europe/Berlin] Attempting to remove photo: C:/xampp/htdocs/hostel-management-system/img/person-3.jpg
+[03-Nov-2025 07:20:45 Europe/Berlin] File does not exist: C:/xampp/htdocs/hostel-management-system/img/person-3.jpg
+[03-Nov-2025 07:20:49 Europe/Berlin] Attempting to remove photo: C:/xampp/htdocs/hostel-management-system/img/person-1.jpg
+[03-Nov-2025 07:20:49 Europe/Berlin] File exists, attempting to delete
+[03-Nov-2025 07:20:49 Europe/Berlin] File deleted successfully
+[03-Nov-2025 07:21:15 Europe/Berlin] Photo upload started for user ID: 3
+[03-Nov-2025 07:21:15 Europe/Berlin] Image check result: Array
+(
+    [0] => 778
+    [1] => 995
+    [2] => 2
+    [3] => width="778" height="995"
+    [bits] => 8
+    [channels] => 3
+    [mime] => image/jpeg
+)
+
+[03-Nov-2025 07:21:15 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-3.jpg
+[03-Nov-2025 07:21:15 Europe/Berlin] File uploaded successfully
+[03-Nov-2025 07:22:16 Europe/Berlin] Photo upload started for user ID: 1
+[03-Nov-2025 07:22:16 Europe/Berlin] Image check result: Array
+(
+    [0] => 778
+    [1] => 995
+    [2] => 2
+    [3] => width="778" height="995"
+    [bits] => 8
+    [channels] => 3
+    [mime] => image/jpeg
+)
+
+[03-Nov-2025 07:22:16 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-1.jpg
+[03-Nov-2025 07:22:16 Europe/Berlin] File uploaded successfully
+[03-Nov-2025 07:23:44 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-004
+    [firstName] => virat
+    [lastName] => kohli
+    [email] => virat@gmail.com
+    [phone] => 7828288989
+    [gender] => Male
+    [createUser] => 
+)
+
+[03-Nov-2025 07:23:44 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-004', 'virat', 'kohli', 'virat@gmail.com', '7828288989', 'Male')
+[03-Nov-2025 07:24:01 Europe/Berlin] Photo upload started for user ID: 4
+[03-Nov-2025 07:24:01 Europe/Berlin] Image check result: Array
+(
+    [0] => 778
+    [1] => 995
+    [2] => 2
+    [3] => width="778" height="995"
+    [bits] => 8
+    [channels] => 3
+    [mime] => image/jpeg
+)
+
+[03-Nov-2025 07:24:01 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-4.jpg
+[03-Nov-2025 07:24:01 Europe/Berlin] File uploaded successfully
+[03-Nov-2025 07:24:09 Europe/Berlin] Attempting to remove photo: C:/xampp/htdocs/hostel-management-system/img/person-4.jpg
+[03-Nov-2025 07:24:09 Europe/Berlin] File exists, attempting to delete
+[03-Nov-2025 07:24:09 Europe/Berlin] File deleted successfully
+[03-Nov-2025 07:24:15 Europe/Berlin] Attempting to remove photo: C:/xampp/htdocs/hostel-management-system/img/person-3.jpg
+[03-Nov-2025 07:24:15 Europe/Berlin] File exists, attempting to delete
+[03-Nov-2025 07:24:15 Europe/Berlin] File deleted successfully
+[03-Nov-2025 07:36:13 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-005
+    [firstName] => sardar
+    [lastName] => singh
+    [email] => singh@gmail.com
+    [phone] => 7348494949
+    [gender] => Male
+    [createUser] => 
+)
+
+[03-Nov-2025 07:36:13 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-005', 'sardar', 'singh', 'singh@gmail.com', '7348494949', 'Male')
+[03-Nov-2025 08:18:42 Europe/Berlin] Attempting to remove photo: C:/xampp/htdocs/hostel-management-system/img/person-1.jpg
+[03-Nov-2025 08:18:42 Europe/Berlin] File exists, attempting to delete
+[03-Nov-2025 08:18:42 Europe/Berlin] File deleted successfully
+[03-Nov-2025 08:20:37 Europe/Berlin] Photo upload started for user ID: 4
+[03-Nov-2025 08:20:37 Europe/Berlin] Image check result: Array
+(
+    [0] => 600
+    [1] => 422
+    [2] => 2
+    [3] => width="600" height="422"
+    [bits] => 8
+    [channels] => 3
+    [mime] => image/jpeg
+)
+
+[03-Nov-2025 08:20:37 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-4.jpg
+[03-Nov-2025 08:20:37 Europe/Berlin] File uploaded successfully
+[03-Nov-2025 08:20:50 Europe/Berlin] Photo upload started for user ID: 4
+[03-Nov-2025 08:20:50 Europe/Berlin] Image check result: Array
+(
+    [0] => 1280
+    [1] => 720
+    [2] => 2
+    [3] => width="1280" height="720"
+    [bits] => 8
+    [channels] => 3
+    [mime] => image/jpeg
+)
+
+[03-Nov-2025 08:20:50 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-4.jpg
+[03-Nov-2025 08:20:50 Europe/Berlin] File uploaded successfully
+[03-Nov-2025 08:21:02 Europe/Berlin] Attempting to remove photo: C:/xampp/htdocs/hostel-management-system/img/person-4.jpg
+[03-Nov-2025 08:21:02 Europe/Berlin] File exists, attempting to delete
+[03-Nov-2025 08:21:02 Europe/Berlin] File deleted successfully
+[03-Nov-2025 08:26:54 Europe/Berlin] Photo upload started for user ID: 4
+[03-Nov-2025 08:26:54 Europe/Berlin] Image check result: Array
+(
+    [0] => 1280
+    [1] => 720
+    [2] => 2
+    [3] => width="1280" height="720"
+    [bits] => 8
+    [channels] => 3
+    [mime] => image/jpeg
+)
+
+[03-Nov-2025 08:26:54 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-4.jpg
+[03-Nov-2025 08:26:54 Europe/Berlin] File uploaded successfully
+[03-Nov-2025 08:27:13 Europe/Berlin] Photo upload started for user ID: 3
+[03-Nov-2025 08:27:13 Europe/Berlin] Image check result: Array
+(
+    [0] => 600
+    [1] => 422
+    [2] => 2
+    [3] => width="600" height="422"
+    [bits] => 8
+    [channels] => 3
+    [mime] => image/jpeg
+)
+
+[03-Nov-2025 08:27:13 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-3.jpg
+[03-Nov-2025 08:27:13 Europe/Berlin] File uploaded successfully
+[03-Nov-2025 08:27:24 Europe/Berlin] Photo upload started for user ID: 2
+[03-Nov-2025 08:27:24 Europe/Berlin] Image check result: Array
+(
+    [0] => 1280
+    [1] => 720
+    [2] => 2
+    [3] => width="1280" height="720"
+    [bits] => 8
+    [channels] => 3
+    [mime] => image/jpeg
+)
+
+[03-Nov-2025 08:27:24 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-2.jpg
+[03-Nov-2025 08:27:24 Europe/Berlin] File uploaded successfully
+[03-Nov-2025 08:28:26 Europe/Berlin] Photo upload started for user ID: 1
+[03-Nov-2025 08:28:26 Europe/Berlin] Image check result: Array
+(
+    [0] => 1280
+    [1] => 720
+    [2] => 2
+    [3] => width="1280" height="720"
+    [bits] => 8
+    [channels] => 3
+    [mime] => image/jpeg
+)
+
+[03-Nov-2025 08:28:26 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-1.jpg
+[03-Nov-2025 08:28:26 Europe/Berlin] File uploaded successfully
+[03-Nov-2025 10:34:18 Europe/Berlin] Registration data: Array
+(
+    [registration] => REG-006
+    [firstName] => lara
+    [lastName] => vr
+    [email] => gadambharat3833@gmail.com
+    [phone] => 9063563833
+    [gender] => Male
+    [createUser] => 
+)
+
+[03-Nov-2025 10:34:18 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
+                    (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
+                    VALUES ('REG-006', 'lara', 'vr', 'gadambharat3833@gmail.com', '9063563833', 'Male')
