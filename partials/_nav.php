@@ -45,6 +45,10 @@
                       <i class="fa fa-exclamation-circle"></i>
                       <span class="nav__name">Manage Complaints</span>
                     </a>
+                    <a href="index.php?page=checkinManage" class="nav__link nav-checkinManage">
+                      <i class="fa fa-door-open"></i>
+                      <span class="nav__name">Check-in/Check-out</span>
+                    </a>
                     <?php endif; ?>
                     
                     <!-- Always show roommate matching - for both admin and student views -->

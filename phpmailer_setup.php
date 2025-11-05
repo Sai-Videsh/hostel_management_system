@@ -23,8 +23,8 @@ function sendEmail($to, $subject, $body, $from_name= "Hostel Management System",
             $mail->isSMTP();                                      // Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                 // SMTP server - change to your SMTP server
             $mail->SMTPAuth   = true;                             // Enable SMTP authentication
-            $mail->Username   = '';           // SMTP username - change to your email
-            $mail->Password   = '';              // SMTP password - change to your password/app-password
+            $mail->Username   = 'gadambharat3833@gmail.com';           // SMTP username - change to your email
+            $mail->Password   = 'ylnw tivl dovo kdra';              // SMTP password - change to your password/app-password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;   // Enable TLS encryption
             $mail->Port       = 587;                              // TCP port to connect to (587 for TLS, 465 for SSL)
             

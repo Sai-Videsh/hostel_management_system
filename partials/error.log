@@ -424,3 +424,17 @@
 [03-Nov-2025 10:34:18 Europe/Berlin] SQL query: INSERT INTO `userregistration` 
                     (`registration_no`, `first_name`, `last_name`, `emailid`, `contact_no`, `gender`) 
                     VALUES ('REG-006', 'lara', 'vr', 'gadambharat3833@gmail.com', '9063563833', 'Male')
+[05-Nov-2025 06:23:33 Europe/Berlin] Photo upload started for user ID: 6
+[05-Nov-2025 06:23:33 Europe/Berlin] Image check result: Array
+(
+    [0] => 1280
+    [1] => 720
+    [2] => 2
+    [3] => width="1280" height="720"
+    [bits] => 8
+    [channels] => 3
+    [mime] => image/jpeg
+)
+
+[05-Nov-2025 06:23:33 Europe/Berlin] Attempting to move file to: C:/xampp/htdocs/hostel-management-system/img/person-6.jpg
+[05-Nov-2025 06:23:33 Europe/Berlin] File uploaded successfully

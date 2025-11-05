@@ -18,11 +18,16 @@ $error_msg = '';
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['generate_password'])) {
     $reg_no = mysqli_real_escape_string($conn, $_POST['reg_no']);
     
-    // Verify student exists
-    $check_sql = "SELECT registration_no FROM userregistration WHERE registration_no = '$reg_no'";
+    // Verify student exists and get email
+    $check_sql = "SELECT registration_no, emailid, CONCAT(first_name, ' ', last_name) as full_name FROM userregistration WHERE registration_no = '$reg_no'";
     $check_result = mysqli_query($conn, $check_sql);
     
     if(mysqli_num_rows($check_result) > 0) {
+        // Get student details
+        $student_data = mysqli_fetch_assoc($check_result);
+        $student_email = $student_data['emailid'];
+        $student_name = $student_data['full_name'];
+        
         // Check if login already exists
         $exists_sql = "SELECT id FROM student_login WHERE registration_no = '$reg_no'";
         $exists_result = mysqli_query($conn, $exists_sql);
@@ -37,8 +42,29 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['generate_password'])) {
                           WHERE registration_no = '$reg_no'";
             
             if(mysqli_query($conn, $update_sql)) {
-                $success_msg = "New password generated for student $reg_no: <strong>$new_password</strong><br>
-                               Please provide this password to the student.";
+                // Send email to student
+                $to = $student_email;
+                $subject = "Your Hostel Portal Login Password";
+                $message = "Dear $student_name,\n\n";
+                $message .= "Your login credentials for the Hostel Management Portal:\n\n";
+                $message .= "Registration Number: $reg_no\n";
+                $message .= "Password: $new_password\n\n";
+                $message .= "Please login at: " . $_SERVER['HTTP_HOST'] . "/hostel-management-system/student-login.php\n\n";
+                $message .= "IMPORTANT: You will be required to change this password on first login.\n\n";
+                $message .= "Best Regards,\nHostel Administration";
+                $headers = "From: hostel@iiitdmkurnool.edu.in\r\n";
+                $headers .= "Reply-To: hostel@iiitdmkurnool.edu.in\r\n";
+                
+                // Send email
+                $email_sent = mail($to, $subject, $message, $headers);
+                
+                if($email_sent) {
+                    $success_msg = "New password generated for student $reg_no: <strong>$new_password</strong><br>
+                                   Email sent successfully to: <strong>$student_email</strong>";
+                } else {
+                    $success_msg = "New password generated for student $reg_no: <strong>$new_password</strong><br>
+                                   <span class='text-warning'>Warning: Email could not be sent to $student_email</span>";
+                }
             } else {
                 $error_msg = "Error updating password: " . mysqli_error($conn);
             }
@@ -51,8 +77,29 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['generate_password'])) {
                           VALUES ('$reg_no', '$hashed_password')";
             
             if(mysqli_query($conn, $insert_sql)) {
-                $success_msg = "Login created for student $reg_no with password: <strong>$new_password</strong><br>
-                               Please provide this password to the student.";
+                // Send email to student
+                $to = $student_email;
+                $subject = "Your Hostel Portal Login Password";
+                $message = "Dear $student_name,\n\n";
+                $message .= "Your login credentials for the Hostel Management Portal:\n\n";
+                $message .= "Registration Number: $reg_no\n";
+                $message .= "Password: $new_password\n\n";
+                $message .= "Please login at: " . $_SERVER['HTTP_HOST'] . "/hostel-management-system/student-login.php\n\n";
+                $message .= "IMPORTANT: You will be required to change this password on first login.\n\n";
+                $message .= "Best Regards,\nHostel Administration";
+                $headers = "From: hostel@iiitdmkurnool.edu.in\r\n";
+                $headers .= "Reply-To: hostel@iiitdmkurnool.edu.in\r\n";
+                
+                // Send email
+                $email_sent = mail($to, $subject, $message, $headers);
+                
+                if($email_sent) {
+                    $success_msg = "Login created for student $reg_no with password: <strong>$new_password</strong><br>
+                                   Email sent successfully to: <strong>$student_email</strong>";
+                } else {
+                    $success_msg = "Login created for student $reg_no with password: <strong>$new_password</strong><br>
+                                   <span class='text-warning'>Warning: Email could not be sent to $student_email</span>";
+                }
             } else {
                 $error_msg = "Error creating login: " . mysqli_error($conn);
             }
